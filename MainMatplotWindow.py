@@ -92,7 +92,7 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
         self.canvas.draw()
 
         pyplot.grid()
-        pyplot.xlabel("Длина стержня")
+        pyplot.xlabel("Длина струны")
         pyplot.ylabel("Время")
         pyplot.plot(data[0], data[1], 'b')
 
