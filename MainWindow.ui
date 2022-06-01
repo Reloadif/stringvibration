@@ -35,9 +35,9 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>500</y>
-      <width>661</width>
+      <x>40</x>
+      <y>490</y>
+      <width>721</width>
       <height>181</height>
      </rect>
     </property>
@@ -50,7 +50,7 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>430</x>
        <y>90</y>
        <width>21</width>
        <height>31</height>
@@ -63,9 +63,9 @@
     <widget class="QLineEdit" name="PhiFirstLineEdit">
      <property name="geometry">
       <rect>
-       <x>580</x>
+       <x>450</x>
        <y>90</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -76,7 +76,7 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>160</x>
        <y>90</y>
        <width>81</width>
        <height>31</height>
@@ -89,9 +89,9 @@
     <widget class="QLineEdit" name="PhiZeroLineEdit">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>40</y>
-       <width>61</width>
+       <x>350</x>
+       <y>90</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -99,8 +99,8 @@
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>40</y>
+       <x>330</x>
+       <y>140</y>
        <width>21</width>
        <height>31</height>
       </rect>
@@ -112,7 +112,7 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>160</x>
        <y>40</y>
        <width>81</width>
        <height>31</height>
@@ -127,7 +127,7 @@
       <rect>
        <x>10</x>
        <y>90</y>
-       <width>81</width>
+       <width>71</width>
        <height>31</height>
       </rect>
      </property>
@@ -139,8 +139,8 @@
      <property name="geometry">
       <rect>
        <x>450</x>
-       <y>90</y>
-       <width>61</width>
+       <y>140</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -148,7 +148,7 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>420</x>
+       <x>530</x>
        <y>140</y>
        <width>21</width>
        <height>31</height>
@@ -161,9 +161,9 @@
     <widget class="QLineEdit" name="LengthStepLineEdit">
      <property name="geometry">
       <rect>
-       <x>270</x>
+       <x>250</x>
        <y>40</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -171,9 +171,9 @@
     <widget class="QLineEdit" name="PsiZeroLineEdit">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>40</y>
-       <width>61</width>
+       <x>350</x>
+       <y>140</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -181,8 +181,8 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>90</y>
+       <x>430</x>
+       <y>140</y>
        <width>21</width>
        <height>31</height>
       </rect>
@@ -196,7 +196,7 @@
       <rect>
        <x>90</x>
        <y>40</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -206,7 +206,7 @@
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>81</width>
+       <width>71</width>
        <height>31</height>
       </rect>
      </property>
@@ -219,7 +219,7 @@
       <rect>
        <x>90</x>
        <y>90</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -227,9 +227,9 @@
     <widget class="QLineEdit" name="TimeStepLineEdit">
      <property name="geometry">
       <rect>
-       <x>270</x>
+       <x>250</x>
        <y>90</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -237,9 +237,9 @@
     <widget class="QLineEdit" name="PsiSecondLineEdit">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>550</x>
        <y>140</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -247,8 +247,8 @@
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>550</x>
-       <y>40</y>
+       <x>330</x>
+       <y>90</y>
        <width>21</width>
        <height>31</height>
       </rect>
@@ -260,9 +260,9 @@
     <widget class="QLineEdit" name="PhiSecondLineEdit">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>140</y>
-       <width>61</width>
+       <x>550</x>
+       <y>90</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -273,8 +273,8 @@
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>550</x>
-       <y>140</y>
+       <x>530</x>
+       <y>90</y>
        <width>21</width>
        <height>31</height>
       </rect>
@@ -286,7 +286,7 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>160</x>
        <y>140</y>
        <width>81</width>
        <height>31</height>
@@ -299,20 +299,112 @@
     <widget class="QLineEdit" name="CoefficientALineEdit">
      <property name="geometry">
       <rect>
-       <x>270</x>
+       <x>250</x>
        <y>140</y>
-       <width>61</width>
+       <width>51</width>
        <height>31</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>40</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>f0</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FZeroLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>40</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FFirstLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>40</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>40</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>f1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FSecondLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>40</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>40</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>f2</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FThirdLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>40</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>40</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>f3</string>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>40</x>
       <y>20</y>
-      <width>661</width>
+      <width>721</width>
       <height>461</height>
      </rect>
     </property>
@@ -321,7 +413,7 @@
    <widget class="QPushButton" name="ClearSheduleButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>40</x>
       <y>700</y>
       <width>181</width>
       <height>41</height>
@@ -361,7 +453,7 @@ outline: none;</string>
    <widget class="QPushButton" name="ShowPhiFunctionButton">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>580</x>
       <y>700</y>
       <width>181</width>
       <height>41</height>
@@ -397,12 +489,16 @@ outline: none;</string>
   <tabstop>LengthStepLineEdit</tabstop>
   <tabstop>TimeStepLineEdit</tabstop>
   <tabstop>CoefficientALineEdit</tabstop>
-  <tabstop>PsiZeroLineEdit</tabstop>
-  <tabstop>PsiFirtsLineEdit</tabstop>
-  <tabstop>PsiSecondLineEdit</tabstop>
+  <tabstop>FZeroLineEdit</tabstop>
+  <tabstop>FFirstLineEdit</tabstop>
+  <tabstop>FSecondLineEdit</tabstop>
+  <tabstop>FThirdLineEdit</tabstop>
   <tabstop>PhiZeroLineEdit</tabstop>
   <tabstop>PhiFirstLineEdit</tabstop>
   <tabstop>PhiSecondLineEdit</tabstop>
+  <tabstop>PsiZeroLineEdit</tabstop>
+  <tabstop>PsiFirtsLineEdit</tabstop>
+  <tabstop>PsiSecondLineEdit</tabstop>
   <tabstop>RunCalculateButton</tabstop>
   <tabstop>ShowPhiFunctionButton</tabstop>
   <tabstop>ClearSheduleButton</tabstop>

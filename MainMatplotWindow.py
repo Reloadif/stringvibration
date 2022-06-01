@@ -58,12 +58,16 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
         self.userInterface.LengthStepLineEdit.setValidator(self.doubleValidator)
         self.userInterface.TimeStepLineEdit.setValidator(self.doubleValidator)
         self.userInterface.CoefficientALineEdit.setValidator(self.doubleValidator)
-        self.userInterface.PsiZeroLineEdit.setValidator(self.doubleValidator)
-        self.userInterface.PsiFirtsLineEdit.setValidator(self.doubleValidator)
-        self.userInterface.PsiSecondLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.FZeroLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.FFirstLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.FSecondLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.FThirdLineEdit.setValidator(self.doubleValidator)
         self.userInterface.PhiZeroLineEdit.setValidator(self.doubleValidator)
         self.userInterface.PhiFirstLineEdit.setValidator(self.doubleValidator)
         self.userInterface.PhiSecondLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.PsiZeroLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.PsiFirtsLineEdit.setValidator(self.doubleValidator)
+        self.userInterface.PsiSecondLineEdit.setValidator(self.doubleValidator)
     
     def onClickClearSheduleButton(self):
         self.resultSolution = None
@@ -96,7 +100,7 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
         pyplot.ylabel("Время")
         pyplot.plot(data[0], data[1], 'b')
 
-        self.canvas.draw()
+        self.canvas.draw() 
 
     def fillDataContext(self):
         if self.userInterface.StringLengthLineEdit.text() == "":
@@ -114,13 +118,16 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
         if self.userInterface.CoefficientALineEdit.text() == "":
             ShowErorMassageBox("Заполните все поля для ввода!")
             return False
-        if self.userInterface.PsiZeroLineEdit.text() == "":
+        if self.userInterface.FZeroLineEdit.text() == "":
             ShowErorMassageBox("Заполните все поля для ввода!")
             return False
-        if self.userInterface.PsiFirtsLineEdit.text() == "":
+        if self.userInterface.FFirstLineEdit.text() == "":
             ShowErorMassageBox("Заполните все поля для ввода!")
             return False
-        if self.userInterface.PsiSecondLineEdit.text() == "":
+        if self.userInterface.FSecondLineEdit.text() == "":
+            ShowErorMassageBox("Заполните все поля для ввода!")
+            return False
+        if self.userInterface.FThirdLineEdit.text() == "":
             ShowErorMassageBox("Заполните все поля для ввода!")
             return False
         if self.userInterface.PhiZeroLineEdit.text() == "":
@@ -132,6 +139,15 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
         if self.userInterface.PhiSecondLineEdit.text() == "":
             ShowErorMassageBox("Заполните все поля для ввода!")
             return False
+        if self.userInterface.PsiZeroLineEdit.text() == "":
+            ShowErorMassageBox("Заполните все поля для ввода!")
+            return False
+        if self.userInterface.PsiFirtsLineEdit.text() == "":
+            ShowErorMassageBox("Заполните все поля для ввода!")
+            return False
+        if self.userInterface.PsiSecondLineEdit.text() == "":
+            ShowErorMassageBox("Заполните все поля для ввода!")
+            return False
         
         self.dataContext.initialize(
             float(self.userInterface.StringLengthLineEdit.text().replace(',','.')),
@@ -139,12 +155,16 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
             float(self.userInterface.LengthStepLineEdit.text().replace(',','.')),
             float(self.userInterface.TimeStepLineEdit.text().replace(',','.')),
             float(self.userInterface.CoefficientALineEdit.text().replace(',','.')),
-            float(self.userInterface.PsiZeroLineEdit.text().replace(',','.')),
-            float(self.userInterface.PsiFirtsLineEdit.text().replace(',','.')),
-            float(self.userInterface.PsiSecondLineEdit.text().replace(',','.')),
+            float(self.userInterface.FZeroLineEdit.text().replace(',','.')),
+            float(self.userInterface.FFirstLineEdit.text().replace(',','.')),
+            float(self.userInterface.FSecondLineEdit.text().replace(',','.')),
+            float(self.userInterface.FThirdLineEdit.text().replace(',','.')),
             float(self.userInterface.PhiZeroLineEdit.text().replace(',','.')),
             float(self.userInterface.PhiFirstLineEdit.text().replace(',','.')),
-            float(self.userInterface.PhiSecondLineEdit.text().replace(',','.'))
+            float(self.userInterface.PhiSecondLineEdit.text().replace(',','.')),
+            float(self.userInterface.PsiZeroLineEdit.text().replace(',','.')),
+            float(self.userInterface.PsiFirtsLineEdit.text().replace(',','.')),
+            float(self.userInterface.PsiSecondLineEdit.text().replace(',','.'))
         )
 
         return True

@@ -39,19 +39,26 @@ class DataContext:
 
         self.coefficientA = None
 
-        self.psi0 = None
-        self.psi1 = None
-        self.psi2 = None
+        self.f0 = None
+        self.f1 = None
+        self.f2 = None
+        self.f3 = None
 
         self.phi0 = None
         self.phi1 = None
         self.phi2 = None
+        self.phi3 = None
+
+        self.psi0 = None
+        self.psi1 = None
+        self.psi2 = None
+        self.psi3 = None
 
         self.MainFunction = None
         self.PhiFunction = None
         self.PsiFunction = None
     
-    def initialize(self, stringLength, time, lengthStep, timeStep, coefficientA, psi0, psi1, psi2, phi0, phi1, phi2):
+    def initialize(self, stringLength, time, lengthStep, timeStep, coefficientA, f0, f1, f2, f3, phi0, phi1, phi2, psi0, psi1, psi2):
         self.stringLength = stringLength
         self.time = time
         self.lengthStep = lengthStep
@@ -59,18 +66,23 @@ class DataContext:
 
         self.coefficientA = coefficientA
 
-        self.psi0 = psi0
-        self.psi1 = psi1
-        self.psi2 = psi2
+        self.f0 = f0
+        self.f1 = f1
+        self.f2 = f2
+        self.f3 = f3
 
         self.phi0 = phi0
         self.phi1 = phi1
         self.phi2 = phi2
 
+        self.psi0 = psi0
+        self.psi1 = psi1
+        self.psi2 = psi2
+
         self.phi3 = 1 - (stringLength * phi0 + stringLength * 0.5 * phi1 + stringLength * 0.5 * phi2)
         self.psi3 = (0 - (stringLength * phi0 * psi0 + stringLength * 0.5 * phi1 * psi1 + stringLength * 0.5 * phi2 * psi2)) / self.phi3
 
-        self.MainFunction = lambda x, t: 0.2 + 0.3 * math.cos((math.pi * x) / self.stringLength) + 0.4 * math.cos((2 * math.pi * x) / self.stringLength) + 0.256 * math.cos((3 * math.pi * x) / self.stringLength)
+        self.MainFunction = lambda x, t: self.f0 + self.f1 * math.cos((math.pi * x) / self.stringLength) + self.f2 * math.cos((2 * math.pi * x) / self.stringLength) + self.f3 * math.cos((3 * math.pi * x) / self.stringLength)
         self.PhiFunction = lambda x: self.phi0 + self.phi1 * math.cos((math.pi * x) / self.stringLength) + self.phi2 * math.cos((2 * math.pi * x) / self.stringLength) + self.phi3 * math.cos((3 * math.pi * x) / self.stringLength)
         self.PsiFunction = lambda x: self.psi0 + self.psi1 * math.cos((math.pi * x) / self.stringLength) + self.psi2 * math.cos((2 * math.pi * x) / self.stringLength) + self.psi3 * math.cos((3 * math.pi * x) / self.stringLength)
 
