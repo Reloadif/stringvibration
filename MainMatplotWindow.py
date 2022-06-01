@@ -77,7 +77,7 @@ class MainMatplotWindow(QtWidgets.QMainWindow):
     def onClickRunCalculateButton(self):
         if(not self.fillDataContext()): return
 
-        k = self.dataContext.coefficientA * self.dataContext.coefficientA * self.dataContext.timeStep / (self.dataContext.lengthStep * self.dataContext.lengthStep)
+        k = (self.dataContext.coefficientA * self.dataContext.coefficientA * self.dataContext.timeStep) / (self.dataContext.lengthStep * self.dataContext.lengthStep)
         if (k < 0.25):
             self.resultSolution = Solution(self.dataContext)
             self.drawShedule(self.resultSolution)

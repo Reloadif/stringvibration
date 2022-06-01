@@ -65,6 +65,7 @@ class DataContext:
         self.timeStep = timeStep
 
         self.coefficientA = coefficientA
+        self.courantNumber = (coefficientA * timeStep) / lengthStep
 
         self.f0 = f0
         self.f1 = f1
@@ -90,14 +91,13 @@ class DataContext:
 
 # Solve u_tt = a^2 * u_xx + f(x,t) on (0 < x < l) and (0 <= t <= T)
 def Solution(data):
-    count_T = int(data.time / data.timeStep)
+    count_T = int(round(data.time / data.timeStep))
     t = numpy.linspace(0, count_T * data.timeStep, count_T + 1)
 
-    count_N = int(data.stringLength / (data.timeStep * data.coefficientA / float(data.lengthStep)))
-    x = numpy.linspace(0, data.stringLength, count_N + 1)
+    dx = (data.timeStep * data.coefficientA / float(data.courantNumber))
 
-    dx = x[1] - x[0]
-    dt = t[1] - t[0]
+    count_N = int(round(data.stringLength / dx))
+    x = numpy.linspace(0, data.stringLength, count_N + 1)
 
     phiFunction = numpy.zeros(count_N + 1)
     u     = numpy.zeros(count_N + 1)
@@ -105,27 +105,25 @@ def Solution(data):
     u_nm1 = numpy.zeros(count_N + 1)
 
     for i in range(0, count_N + 1):
-        phiFunction[i] = data.PhiFunction(x[i])
-        u_n[i] = data.PhiFunction(x[i])
+        phiFunction[i] = u_n[i] = data.PhiFunction(x[i])
 
-    n = 0
     for i in range(1, count_N):
-        u[i] = u_n[i] + dt * data.PsiFunction(x[i]) + 0.5 * data.lengthStep**2 * (u_n[i-1] - 2 * u_n[i] + u_n[i+1]) + 0.5 * dt**2 * data.MainFunction(x[i], t[n])
+        u[i] = u_n[i] + data.timeStep * data.PsiFunction(x[i]) + 0.5 * data.courantNumber**2 * (u_n[i-1] - 2 * u_n[i] + u_n[i+1]) + 0.5 * data.timeStep**2 * data.MainFunction(x[i], t[0])
 
     u[0] = 0
     u[count_N] = 0
 
-    u_nm1[:] = u_n
-    u_n[:] = u
+    u_nm1, u_n, u = u_n, u, u_nm1
 
     for n in range(1, count_T):
         for i in range(1, count_N):
-            u[i] = - u_nm1[i] + 2 * u_n[i] + data.lengthStep**2 * (u_n[i-1] - 2 * u_n[i] + u_n[i+1]) + dt**2 * data.MainFunction(x[i], t[n])
+            u[i] = -u_nm1[i] + 2 * u_n[i] + data.courantNumber**2 * (u_n[i-1] - 2 * u_n[i] + u_n[i+1]) + data.timeStep**2 * data.MainFunction(x[i], t[n])
 
         u[0] = 0
         u[count_N] = 0
 
-        u_nm1[:] = u_n
-        u_n[:] = u
+        u_nm1, u_n, u = u_n, u, u_nm1
+
+    u = u_n
 
     return x, u, t, phiFunction
